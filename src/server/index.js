@@ -21,7 +21,8 @@ if (!firebase.apps.length) {
   if (process.env.GCP_SERVICE_KEY) {
     firebase.initializeApp({
       credential: firebase.credential.cert(
-        JSON.parse(process.env.GCP_SERVICE_KEY),
+        process.env.GCP_SERVICE_KEY,
+        // JSON.parse(process.env.GCP_SERVICE_KEY),
       ),
     });
   } else {

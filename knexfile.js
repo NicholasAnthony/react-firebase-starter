@@ -4,7 +4,7 @@
  * Copyright (c) 2015-present Kriasoft | MIT License
  */
 
-const fs = require('fs');
+// const fs = require('fs');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
@@ -20,14 +20,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // https://github.com/tgriesser/knex/issues/852
-if (process.env.PGSSLMODE || process.env.PGSSLMODE !== 'disable') {
-  connection.ssl = {
-    rejectUnauthorized: false,
-    ca: fs.readFileSync(process.env.PGSSLROOTCERT).toString(),
-    key: fs.readFileSync(process.env.PGSSLKEY).toString(),
-    cert: fs.readFileSync(process.env.PGSSLCERT).toString(),
-  };
-}
+// if (process.env.PGSSLMODE || process.env.PGSSLMODE !== 'disable') {
+//   connection.ssl = {
+//     rejectUnauthorized: false,
+//     ca: fs.readFileSync(process.env.PGSSLROOTCERT).toString(),
+//     key: fs.readFileSync(process.env.PGSSLKEY).toString(),
+//     cert: fs.readFileSync(process.env.PGSSLCERT).toString(),
+//   };
+// }
 
 // Knex configuration
 // http://knexjs.org/#knexfile

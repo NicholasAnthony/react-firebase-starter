@@ -30,3 +30,8 @@ firebase-error.log*
 .vscode/*
 !.vscode/snippets
 !.vscode/settings.json
+
+# Firebase
+# shizout-app-firebase-adminsdk-z14mn-e49a5b63f6
+
+.nvmrc
